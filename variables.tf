@@ -166,9 +166,18 @@ variable "rules" {
   # Protocols (tcp, udp, icmp, all - are allowed keywords) or numbers (from https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml):
   # All = -1, IPV4-ICMP = 1, TCP = 6, UDP = 17, IPV6-ICMP = 58
   default = {
-# RDP
     rdp-tcp = [3389, 3389, "tcp", "Remote Desktop"]
     rdp-udp = [3389, 3389, "udp", "Remote Desktop"]
+    all-all       = [-1, -1, "-1", "All protocols"]  #engress for SG
+    custom-161-udp = [161, 161, "udp", "custom-161-udp"]
+    custom-162-udp = [162, 162, "udp", "custom-162-udp"]
+    custom-5721-tcp = [5721, 5721, "tcp", "custom-5721-tcp"]
+    custom-8081-tcp = [8081, 8081, "tcp", "custom-8081-tcp"]
+    custom-8888-tcp = [8888, 8888, "tcp", "custom-8888-tcp"]
+    http-80-tcp   = [80, 80, "tcp", "HTTP"]
+    https-443-tcp  = [443, 443, "tcp", "HTTPS"]
 
+    all-tcp       = [-1, -1, "tcp", "all tcp"]
+    all-udp       = [-1, -1, "udp", "all udp"]
   }
 }
