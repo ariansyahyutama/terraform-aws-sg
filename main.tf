@@ -20,6 +20,10 @@ resource "aws_security_group" "this" {
     },
     var.tags,
   )
+
+      lifecycle {
+    create_before_destroy = true
+    }
 }
 
 # Ingress - List of rules (simple)
@@ -78,9 +82,12 @@ resource "aws_security_group_rule" "ingress_with_cidr_blocks" {
     "protocol",
     var.rules[lookup(var.ingress_with_cidr_blocks[count.index], "rule", "_")][2],
   )
+#tf bugs, we need to conf this accordingly based on condition
+  #lifecycle {
+   # create_before_destroy = true
+ # }
+  
 }
-
-
 
 # Egress - List of rules (simple)
 # Security group rules with "cidr_blocks" and it uses list of rules names
@@ -171,6 +178,10 @@ resource "aws_security_group_rule" "ingress_with_source_security_group_id" {
       "_",
     )][2],
   )
+
+     lifecycle {
+    create_before_destroy = true
+    }
 }
 
 #Egress
@@ -256,4 +267,6 @@ resource "aws_security_group_rule" "egress_with_cidr_blocks" {
     "protocol",
     var.rules[lookup(var.egress_with_cidr_blocks[count.index], "rule", "_")][2],
   )
+
+
 }

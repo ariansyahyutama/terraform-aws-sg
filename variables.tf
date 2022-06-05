@@ -172,10 +172,20 @@ variable "rules" {
     custom-161-udp = [161, 161, "udp", "custom-161-udp"]
     custom-162-udp = [162, 162, "udp", "custom-162-udp"]
     custom-5721-tcp = [5721, 5721, "tcp", "custom-5721-tcp"]
+    custom-55721-tcp = [55721, 55721, "tcp", "custom-55721-tcp"]
     custom-8081-tcp = [8081, 8081, "tcp", "custom-8081-tcp"]
+    custom-8082-tcp = [8082, 8082, "tcp", "custom-8082-tcp"]
     custom-8888-tcp = [8888, 8888, "tcp", "custom-8888-tcp"]
+    custom-1443-tcp = [1443, 1443, "tcp", "custom-1443-tcp"]
+    custom-1433-tcp = [1433, 1433, "tcp", "custom-1433-tcp"]
+    custom-1434-tcp = [1434, 1434, "tcp", "custom-1434-tcp"]
+    custom-24020-tcp = [24020, 24020, "tcp", "custom-24020-tcp"]
+    custom-8443-tcp = [8443, 8443, "tcp", "custom-8443-tcp"]
+    
     http-80-tcp   = [80, 80, "tcp", "HTTP"]
     https-443-tcp  = [443, 443, "tcp", "HTTPS"]
+
+    ssh-tcp   = [22, 22, "tcp", "ssh"]
 
     all-tcp       = [-1, -1, "tcp", "all tcp"]
     all-udp       = [-1, -1, "udp", "all udp"]
