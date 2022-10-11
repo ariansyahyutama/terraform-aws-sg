@@ -181,6 +181,7 @@ variable "rules" {
     custom-1434-tcp = [1434, 1434, "tcp", "custom-1434-tcp"]
     custom-24020-tcp = [24020, 24020, "tcp", "custom-24020-tcp"]
     custom-8443-tcp = [8443, 8443, "tcp", "custom-8443-tcp"]
+    custom-50000-tcp = [50000, 50000, "tcp", "custom-50000-tcp"]
     
     http-80-tcp   = [80, 80, "tcp", "HTTP"]
     https-443-tcp  = [443, 443, "tcp", "HTTPS"]
