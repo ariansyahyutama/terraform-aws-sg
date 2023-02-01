@@ -183,6 +183,7 @@ variable "rules" {
     custom-8443-tcp = [8443, 8443, "tcp", "custom-8443-tcp"]
     custom-50000-tcp = [50000, 50000, "tcp", "custom-50000-tcp"]
     
+    
     http-80-tcp   = [80, 80, "tcp", "HTTP"]
     https-443-tcp  = [443, 443, "tcp", "HTTPS"]
 
@@ -190,5 +191,28 @@ variable "rules" {
 
     all-tcp       = [-1, -1, "tcp", "all tcp"]
     all-udp       = [-1, -1, "udp", "all udp"]
+    
+    #for printer
+    http-9191-tcp   = [9191, 9191, "tcp", "http-9191-tcp"]
+    https-9192-tcp  = [9192, 9192, "tcp", "https-9192-tcp"]
+    rpc-9193-tcp  = [9193, 9193, "tcp", "rpc-9193-tcp"]
+    #custom-161-udp = [161, 161, "udp", "custom-161-udp"]
+    netbios-137-udp = [137, 137, "udp", "netbios-137-udp"]
+    netbios-138-udp = [138, 138, "udp", "netbios-138-udp"]
+    netbios-139-tcp = [139, 139, "tcp", "netbios-139-tcp"]
+    smb-445-tcp = [445, 445, "tcp", "smb-445-tcp"]
+    pcut-5114-tcp = [5114, 5114, "tcp", "pcut-5114-tcp"]
+    pcut-5114-udp = [5114, 5114, "udp", "pcut-5114-udp"]
+    ldap-389-tcp = [389, 389, "tcp", "ldap-389-tcp"]
+    ldap-389-udp = [389, 389, "udp", "ldap-389-udp"]
+    ldaps-636-tcp = [636, 636, "tcp", "ldaps-636-tcp"]
+    ldaps-636-udp = [636, 636, "udp", "ldaps-636-udp"]
+    printing-9100-udp = [9100, 9100, "udp", "printing-9100-udp"]
+    printing-9100-tcp = [9100, 9100, "tcp", "printing-9100-tcp"]
+    printing-515-udp = [515, 515, "udp", "printing-515-udp"]
+    printing-515-tcp = [515, 515, "tcp", "printing-515-tcp"]
+    #http-80-tcp   = [80, 80, "tcp", "HTTP"]
+    #https-443-tcp  = [443, 443, "tcp", "HTTPS"]
+    pcutmfp-7627-tcp = [7627, 7627, "tcp", "pcutmfp-7627-tcp"]
   }
 }
