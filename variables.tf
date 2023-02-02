@@ -214,5 +214,18 @@ variable "rules" {
     #http-80-tcp   = [80, 80, "tcp", "HTTP"]
     #https-443-tcp  = [443, 443, "tcp", "HTTPS"]
     pcutmfp-7627-tcp = [7627, 7627, "tcp", "pcutmfp-7627-tcp"]
+    
+    oracle-1521-tcp = [1521, 1521, "tcp", "oracle-1521-tcp"]
+    mysql-3306-tcp = [3306, 3306, "tcp", "mysql-3306-tcp"]
+    postgres-5432-tcp = [5432, 5432, "tcp", "postgres-5432-tcp"]
+    #custom-1433-tcp = [1433, 1433, "tcp", "custom-1433-tcp"]
+    custom-1450-tcp = [1450, 1450, "tcp", "custom-1450-tcp"]
+    
+    
+    custom-9163-tcp = [9163, 9163, "tcp", "custom-9163-tcp"]
+    custom-9164-tcp = [9164, 9164, "tcp", "custom-9164-tcp"]
+    dns-53-udp = [53, 53, "udp", "dns-53-udp"]
+    mdns-5353-udp = [5353, 5353, "udp", "dns-5353-udp"]
+    
   }
 }
